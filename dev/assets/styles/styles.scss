@@ -22,22 +22,25 @@ body {
   color: $black;
   background: $white;
   outline: 0;
-  background-image: url(../images/general/bg_body.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
 
-  input,
-  textarea {
-    border: #666 1px solid;
-    outline: none;
+  &.index-page {
+    background-image: url(../images/general/bg_body.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 
-    &:focus:required:invalid {
-      border-color: red;
-    }
+input,
+textarea {
+  border: #666 1px solid;
+  outline: none;
 
-    &:required:valid {
-      border-color: green;
-    }
+  &:focus:required:invalid {
+    border-color: red;
+  }
+
+  &:required:valid {
+    border-color: green;
   }
 }
 
