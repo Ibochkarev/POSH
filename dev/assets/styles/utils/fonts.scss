@@ -1,0 +1,5 @@
+@import "font-face";
+
+@include font-face("opensans", "../fonts/OpenSans/OpenSans-Regular");
+@include font-face("opensans-extrabold", "../fonts/OpenSans/OpenSans-ExtraBold");
+@include font-face("helios", "../fonts/HeliosCondLight/HeliosCondLight");

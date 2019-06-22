@@ -1,0 +1,270 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $black;
+  color: $white;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.5;
+  font-family: $default-font;
+  overflow-x: hidden;
+  color: $black;
+  background: $white;
+  outline: 0;
+  background-image: url(../images/general/bg_body.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  input,
+  textarea {
+    border: #666 1px solid;
+    outline: none;
+
+    &:focus:required:invalid {
+      border-color: red;
+    }
+
+    &:required:valid {
+      border-color: green;
+    }
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  &.img-width {
+    width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: none;
+
+}
+
+.form-control:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1;
+}
+
+.wrapper {
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.works {
+  z-index: 3;
+
+  .section-title {
+    padding: 120px 0;
+    margin: 0 auto;
+
+    h1 {
+      font-family: "helios", sans-serif;
+      font-size: 66px;
+      font-weight: 400;
+      letter-spacing: -0.31px;
+
+      span {
+        color: #c8c8c8;
+
+        &.color2 {
+          color: #979696;
+        }
+
+        &.color3 {
+          color: #575756;
+        }
+      }
+    }
+  }
+
+  .works-item {
+    padding: 25px;
+    overflow: hidden;
+  }
+
+  .works-link {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    background-color: #9999cc;
+
+    &:hover {
+      .works-preview {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .works-preview {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background-size: cover;
+    height: inherit;
+    transition: transform .3s;
+  }
+
+  .works-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.01;
+    transition: .25s;
+  }
+
+  .works-info {
+    padding: 40px 35px;
+    position: absolute;
+    display: table-cell;
+    vertical-align: bottom;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(191, 190, 200, 0.4), rgba(128, 129, 149, 0.5), rgba(68, 73, 100, 0.7), #051937);
+
+    .works-title,
+    .works-introtext {
+      transition: .2s;
+      display: block;
+      line-height: initial;
+    }
+
+    .works-title {
+      font-family: "opensans-extrabold";
+      font-size: 21px;
+      font-weight: 700;
+      max-width: 250px;
+    }
+
+    .works-introtext {
+      font-size: 14px;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+  }
+
+  .bottom__nav {
+    padding: 50px 0;
+
+    button {
+      border-radius: 10px;
+      background-color: #b2d2e9;
+      width: 167px;
+      height: 47px;
+      border: 0;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 400;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background-color: #6fa4ca;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .tags__cloud {
+    flex-wrap: wrap;
+
+    .tag {
+      background-color: #b2d2e9;
+      border-radius: 10px;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 6px 14px 5px;
+      margin-bottom: 15px;
+      margin-right: 7px;
+
+      &:hover {
+        background-color: #6fa4ca;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+
+
+//Модули
+@import "modules/modules";
+@import "media";

@@ -1,0 +1,94 @@
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {}
+
+// ≥992px
+@media (max-width: 992px) {}
+
+@media (max-width: 800px) {}
+
+// ≥768px
+@media (max-width: 768px) {
+
+  header.header {
+    padding: 20px 10px 35px;
+
+    .header__logo {
+      order: 3;
+      flex-basis: 100%;
+      margin-top: 20px;
+    }
+
+  }
+
+  .works {
+    .section-title {
+      margin: 0;
+      padding: 0 25px;
+
+      h1 {
+        font-size: 50px;
+        line-height: 1;
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .works-item {
+      padding: 15px 25px;
+    }
+
+    .works-info {
+      padding: 30px 25px;
+    }
+
+    .tags__cloud .tag {
+      margin-bottom: 5px;
+      font-size: 12px;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+
+  footer.footer {
+    padding-top: 40px;
+
+    .row {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .footer-social {
+        text-align: center;
+
+        li {
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {}
+
+// > 360px
+
+@media (max-width: 360px) {}
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {}
+
+// ≤768px
+@media (min-width: 768px) {}
+
+// ≤992px
+@media (min-width: 993px) {}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {}
